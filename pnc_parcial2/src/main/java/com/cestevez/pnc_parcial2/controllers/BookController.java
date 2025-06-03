@@ -75,7 +75,7 @@ public class BookController {
             return ResponseEntity.badRequest().build();
         }
     }
-    @GetMapping("/books/author={author}")
+    @GetMapping("/books/author/{author}")
     public ResponseEntity<List<ShowBooksDTO>> getAllBooksByAuthor(@PathVariable("author") String author){
         try {
             List<ShowBooksDTO> books = bookService.findBooksByAuthor(author);
@@ -84,7 +84,7 @@ public class BookController {
             return ResponseEntity.badRequest().build();
         }
     }
-    @GetMapping("/books/genre={genre}")
+    @GetMapping("/books/genre/{genre}")
     public ResponseEntity<List<ShowBooksDTO>> getAllBooksByGenre(@PathVariable("genre") String genre){
         try {
             List<ShowBooksDTO> books = bookService.findBooksByGenre(genre);
@@ -93,7 +93,7 @@ public class BookController {
             return ResponseEntity.badRequest().build();
         }
     }
-    @GetMapping("/books/language={language}")
+    @GetMapping("/books/language/{language}")
     public ResponseEntity<List<ShowBooksDTO>> getAllBooksByLanguage(@PathVariable("language") String language){
         try {
             List<ShowBooksDTO> books = bookService.findBookByLanguage(language);
