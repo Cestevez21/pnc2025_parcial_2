@@ -11,7 +11,7 @@ public class BooksByPagesDTO {
     @NotNull
     @Min(10)
     private int min;
-    
+
     @NotNull
     @Min(11)
     private int max;
