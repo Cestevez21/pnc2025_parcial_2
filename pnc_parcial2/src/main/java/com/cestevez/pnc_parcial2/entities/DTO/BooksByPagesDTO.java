@@ -7,11 +7,11 @@ import lombok.Data;
 
 @Data
 public class BooksByPagesDTO {
-    @NotBlank
+
     @NotNull
     @Min(10)
     private int min;
-    @NotBlank
+    
     @NotNull
     @Min(11)
     private int max;
